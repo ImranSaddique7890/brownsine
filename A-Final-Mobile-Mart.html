@@ -1,0 +1,913 @@
+<html>
+
+<head>
+    <title>Mobile Mart</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #main-div {
+        display: flex;
+    }
+
+    .First-div {
+        border-top: 5px solid yellow;
+        width: 1024px;
+        height: 100px;
+        background-color: rgba(218, 213, 213, 0.957);
+    }
+
+    .First-div img {
+        float: left;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .First-div p {
+        float: right;
+        margin-top: 70px;
+    }
+
+    .second-div {
+        background-color: red;
+        width: 1024px;
+        height: 45px;
+        clear: both;
+    }
+
+    .second-div ul {
+        display: block;
+    }
+
+    .second-div ul li {
+        display: inline-block;
+        list-style: none;
+        vertical-align: middle;
+        line-height: 45px;
+    }
+
+    .second-div ul li a {
+        padding: 0px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .second-div ul li:hover {
+        background-color: gray;
+    }
+
+    .second-div ul ul li:hover {
+        background-color: gray;
+    }
+
+    #anchor ul li:hover {
+        position: relative;
+        background-color: gray;
+    }
+
+    #anchor ul ul {
+        width: 127px;
+        position: absolute;
+        display: none;
+    }
+
+    #anchor ul ul ul {
+        top: 0px;
+    }
+
+    #anchor ul ul li {
+        background-color: red;
+        display: block;
+    }
+
+    #anchor ul li:hover>ul {
+        display: block;
+    }
+
+    #anchor ul ul ul li {
+        position: relative;
+        width: 150px;
+        margin-left: 127px;
+    }
+
+    #main-div {
+        width: 1024px;
+        height: 500px;
+        display: flex;
+    }
+
+    .side-bar {
+        height: 1463px;
+        border-right: 2px solid red;
+        width: 162px;
+        background-color: rgba(218, 213, 213, 0.957);
+    }
+
+    .side-bar p {
+        padding: 10px;
+    }
+
+    .side-bar ul li {
+        list-style: none;
+        display: block;
+    }
+
+    .side-bar ul li a {
+        padding: 15px 10px;
+        display: block;
+
+        text-decoration: none;
+        color: red;
+    }
+
+    .side-bar ul li:hover {
+        background-color: red;
+        color: #fff;
+
+    }
+
+    .side-bar ul li a:hover {
+
+        color: #fff;
+    }
+
+    .side-bar ul li a:hover {
+        /* color: #fff; */
+    }
+
+    .side-bar img {
+        width: 162px;
+    }
+
+    #banner {
+        background-color: rgba(218, 213, 213, 0.957);
+        height: 1455px;
+        width: 900px;
+    }
+
+    #images {
+        margin-top: 955px;
+    }
+
+    #images img {
+        height: 90px;
+        border-bottom: 5px solid red;
+        width: 1024px;
+    }
+
+    #a {
+        background-color: rgba(218, 213, 213, 0.957);
+        width: 1024px;
+        height: 165px;
+        display: flex;
+    }
+
+    .b {
+        width: 280px;
+    }
+
+    #last-line {
+        width: 1024px;
+        background-color: rgba(218, 213, 213, 0.957);
+    }
+
+    #banner {
+        width: 860px;
+    }
+
+    .row {
+        height: 386px;
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 20px;
+        width: 260px;
+        background-color: #fff;
+    }
+
+    .row:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row img {
+        padding-top: 10px;
+    }
+
+    .row button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-2 {
+        height: 439px;
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 20px;
+        width: 258px;
+        background-color: #fff;
+        margin-top: 462px;
+        margin-left: -820px;
+        float: left;
+    }
+
+    .row-2 img {
+        margin-left: 4px;
+        padding-top: 10px;
+    }
+
+    .row-2 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-2 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-2:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row-3 {
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 100px;
+        width: 258px;
+        background-color: #fff;
+        margin-top: 462px;
+        margin-left: -541px;
+        float: left;
+        height: 435px;
+    }
+
+    .row-3 img {
+        width: 172px;
+        margin-left: 42px;
+        padding-top: 10px;
+    }
+
+    .row-3 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-3 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-3:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row-4 {
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 100px;
+        width: 258px;
+        background-color: #fff;
+        margin-top: 462px;
+        margin-left: -258px;
+        float: left;
+        height: 435px;
+    }
+
+    .row-4 img {
+        width: 172px;
+        margin-left: 42px;
+        padding-top: 10px;
+    }
+
+    .row-4 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-4 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-4:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row-5 {
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 100px;
+        width: 258px;
+        background-color: #fff;
+        margin-top: 976px;
+        margin-left: -844px;
+        float: left;
+        height: 427px;
+    }
+
+    .row-5 img {
+        width: 350px;
+        margin-left: -46px;
+        padding-top: 10px;
+    }
+
+    .row-5 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-5 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-5:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+
+    .row-5 {
+        margin-top: 40px;
+        float: left;
+        border-radius: 20px;
+        margin-left: 100px;
+        width: 258px;
+        background-color: #fff;
+        margin-top: 976px;
+        margin-left: -844px;
+        float: left;
+        height: 435px;
+    }
+
+    .row-5 img {
+        width: 350px;
+        margin-left: -46px;
+        padding-top: 10px;
+    }
+
+    .row-5 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-5 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-5:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row-6 {
+        margin-top: -427px;
+        margin-left: 283px;
+        background-color: #fff;
+        width: 260px;
+        height: 435px;
+        border-radius: 20px;
+    }
+
+    .row-6 img {
+        width: 350px;
+        margin-left: -46px;
+        padding-top: 10px;
+    }
+
+    .row-6 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-6 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-6 .row-6:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    .row-7 {
+        margin-top: -427px;
+        margin-left: 283px;
+        background-color: #fff;
+        width: 256px;
+        height: 435px;
+        border-radius: 20px;
+    }
+
+    .row-7 img {
+        width: 192px;
+        margin-left: 31px;
+        padding-top: 10px;
+    }
+
+    .row-7 button {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px solid #fff;
+        border-radius: 40px;
+    }
+
+    .row-7 button:hover {
+        background-color: rgba(218, 213, 213, 0.957);
+        color: red;
+    }
+
+    .row-7:hover {
+        box-shadow: 0px 0px 25px 2px;
+    }
+
+    #ma:hover {
+        color: #fff;
+    }
+
+    #qw:hover {
+        color: #fff;
+    }
+
+    .M:hover {
+        color: #fff;
+    }
+
+    #opp:hover {
+        color: #fff;
+    }
+
+    .g:hover {
+        color: #fff;
+    }
+
+    #se:hover {
+        color: #fff;
+    }
+
+    #ko:hover {
+        color: #fff;
+    }
+
+    .mlm:hover {
+        color: #fff;
+    }
+
+    .dtyi:hover {
+        color: #fff;
+    }
+
+    .pk:hover {
+        color: #fff;
+    }
+
+    .xr:hover {
+        color: #fff;
+    }
+
+    .bh:hover {
+        color: #fff;
+    }
+
+    #u:hover {
+        color: #fff;
+    }
+
+    #z:hover {
+        color: #fff;
+    }
+
+    #cc:hover {
+        color: #fff;
+    }
+
+    #ccc:hover {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="First-div">
+            <img src="c:\Users\Administrator\Downloads\Mobile Mart\EMart.png" />
+            <p>
+                <b>
+                    <font size="5px">
+                        <u style="color: #fff;">
+                            <span style="color: yellow;">We</span> <span style="color:red;">Care</span> <span
+                                style="color: yellow;">Your</span> <span style="color: red;">Mobile</span> &nbsp&nbsp
+                        </u>
+                    </font>
+                </b>
+            </p>
+        </div>
+        <div class="second-div">
+            <div id="anchor">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About US</a></li>
+                    <li><a href="">Mobile Phones</a></li>
+                    <li><a href="">Smart Phones</a></li>
+                    <li><a href="">Tables</a></li>
+                    <li><a href="">Accessories</a>
+                        <ul>
+                            <li><a href="">Protector</a></li>
+                            <li><a href="">Cover/Pouch</a></li>
+                            <li><a href="">Charger</a></li>
+                            <li><a href="">Handfree</a></li>
+                            <li><a href="">Battery</a></li>
+                            <li><a href="">Other</a>
+                                <ul>
+                                    <li><a href="">USB</a></li>
+                                    <li><a href="">Menory</a></li>
+                                    <li><a href="">Data Cable</a></li>
+                                    <li><a href="">Spare Parts</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">USB</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main-div">
+            <div class="side-bar">
+                <p>
+                <h3>
+                    &nbsp Search by Brand
+                </h3>
+                </p>
+                <ul>
+                    <b>
+                        <li><a href="">Samsung</a></li>
+                        <li><a href="">Huawei</a></li>
+                        <li><a href="">Apple</a></li>
+                        <li><a href="">Lenovo</a></li>
+                        <li><a href="">Oppo</a></li>
+                        <li><a href="">Microsoft</a></li>
+                        <li><a href="">Nokia</a></li>
+                        <li><a href="">LG</a></li>
+                        <li><a href="">HTC</a></li>
+                        <li><a href="">Sony</a></li>
+                        <li><a href="">Motorola</a></li>
+                        <li><a href="">Blackberry</a></li>
+                        <li><a href="">Vivo</a></li>
+                        <li><a href="">Ericson</a></li>
+                        <li><a href="">QMobile</a></li>
+                        <li><a href="">Other</a></li>
+                    </b>
+                </ul>
+                <img src="c:\Users\Administrator\Downloads\Mobile Mart\banner.jpg" />
+            </div>
+            <div id="banner">
+                <br>
+                <div>
+                    <center>
+                        <h3>Apple Mobile Phone</h3>
+                    </center>
+                </div>
+                <div class="row">
+                    <div>
+                        <center><img src="c:\Users\Administrator\Downloads\Mobile Mart\1.png" /></center>
+                    </div>
+                    <div>
+                        <center>
+                            <h3>
+                                Apple iphones X
+                            </h3>
+                            <h5>
+                                Rs. 125,500
+                            </h5>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <button>
+                                Buy Now
+                            </button>
+                        </center>
+                    </div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div>
+                        <center><img src="c:\Users\Administrator\Downloads\Mobile Mart\2.png" width="220"></center>
+                    </div>
+                    <div>
+                        <center>
+                            <h3>
+                                Apple iphones X
+                            </h3>
+                            <h5>
+                                Rs. 125,500
+                            </h5>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <button>
+                                Buy Now
+                            </button>
+                        </center>
+                    </div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div>
+                        <center><img src="c:\Users\Administrator\Downloads\Mobile Mart\3.png" width="145"></center>
+                    </div>
+                    <div>
+                        <center>
+                            <h3>
+                                Apple iphones X
+                            </h3>
+                            <h5>
+                                Rs. 125,500
+                            </h5>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <button>
+                                Buy Now
+                            </button>
+                        </center>
+                    </div>
+                </div>
+                <div id="banner-2">
+                    <div class="row-2">
+                        <div>
+                            <center><img src="c:\Users\Administrator\Downloads\Mobile Mart\4.png" /></center>
+                        </div>
+                        <div>
+                            <center>
+                                <h3>
+                                    Apple iphones X
+                                </h3>
+                                <h5>
+                                    Rs. 125,500
+                                </h5>
+                            </center>
+                        </div>
+                        <div>
+                            <center>
+                                <button>
+                                    Buy Now
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-3">
+                    <img src="c:\Users\Administrator\Downloads\Mobile Mart\5.png" />
+                    <div>
+                        <center>
+                            <h3>
+                                Apple iphones X
+                            </h3>
+                            <h5>
+                                Rs. 125,500
+                            </h5>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <button>
+                                Buy Now
+                            </button>
+                        </center>
+                    </div>
+                </div>
+                <div class="row-4">
+                    <div>
+                        <img src="c:\Users\Administrator\Downloads\Mobile Mart\6.png" />
+                        <div>
+                            <center>
+                                <h3>
+                                    Apple iphones X
+                                </h3>
+                                <h5>
+                                    Rs. 125,500
+                                </h5>
+                            </center>
+                        </div>
+                        <div>
+                            <center>
+                                <button>
+                                    Buy Now
+                                </button>
+                            </center>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-5">
+                <div>
+                    <center><img src="c:\Users\Administrator\Downloads\Mobile Mart\10.png"></center>
+                </div>
+                <div>
+                    <center>
+                        <h3>
+                            Apple iphones X
+                        </h3>
+                        <h5>
+                            Rs. 125,500
+                        </h5>
+                    </center>
+                </div>
+                <div>
+                    <center>
+                        <button>
+                            Buy Now
+                        </button>
+                    </center>
+                </div>
+                <div class="row-6">
+                    <div>
+                        <img src="c:\Users\Administrator\Downloads\Mobile Mart\10.png" />
+                        <div>
+                            <center>
+                                <h3>
+                                    Apple iphones X
+                                </h3>
+                                <h5>
+                                    Rs. 125,500
+                                </h5>
+                            </center>
+                        </div>
+                        <div>
+                            <center>
+                                <button>
+                                    Buy Now
+                                </button>
+                            </center>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                    <div class="row-7">
+                        <img src="c:\Users\Administrator\Downloads\Mobile Mart\11.png" />
+                        <div>
+                            <center>
+                                <h3>
+                                    Apple iphones X
+                                </h3>
+                                <h5>
+                                    Rs. 125,500
+                                </h5>
+                            </center>
+                        </div>
+                        <div>
+                            <center>
+                                <button>
+                                    Buy Now
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="images">
+            <img src="c:\Users\Administrator\Downloads\Mobile Mart\banner1.png" />
+        </div>
+        <div id="a">
+            <div class="b">
+                <img src="c:\Users\Administrator\Downloads\Mobile Mart\EMart.png" />
+                <br>
+                <p id="ma">
+                    1st Floor,253-Mobile eMart,Badr
+                </p>
+                <p id="qw">
+                    Plaza,Gujranwala.
+                    <br>
+                    Email:<span style="color: blue;">@mobileemart.pink</span>
+                    <br>
+                <p class="M">
+                    Phone:055-3215866
+                </p>
+            </div>
+            <div class="b">
+                <h3>
+                    Stay Connected
+                </h3>
+                <br>
+                <p id="opp">
+                    Facebook
+                </p>
+                <p class="g">
+                    Youtube
+                </p>
+                <p id="se">
+                    Twitter
+                </p>
+                <p id="ko">
+                    Linkedin
+                </p>
+                <p class="mlm">
+                    Google+
+                </p>
+            </div>
+            <div class="b">
+                <h3>
+                    Payment Methods
+                </h3>
+                <br>
+                <p class="bh">
+                    Easy Paisa
+                </p>
+                <p class="pk">
+                    Jazz Cash
+                </p>
+                <p class="xr">
+                    UBL Card
+                </p>
+                <p class="pk">
+                    Visa card
+                </p>
+                <p class="dtyi">
+                    Master Card
+                </p>
+            </div>
+            <div class="b">
+                <h3>
+                    How to Buy
+                </h3>
+                <br>
+                <p id="u">
+                    Create an Account
+                </p>
+                <p id="z">
+                    Making Payments
+                </p>
+                <p id="cc">
+                    Delivery Options
+                </p>
+                <p id="ccc">
+                    Terms & Conditions
+                </p>
+            </div>
+        </div>
+        <hr style="width: 1024px;">
+        <div id="last-line">
+            <center>Copyrigth @ 2018 Mobile eMart.Designed by: Mustasim Ali</center>
+        </div>
+</body>
+
+</html>
